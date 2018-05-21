@@ -5,6 +5,7 @@
     <th scope="col">From</th>
     <th scope="col">Subject</th>
     <th scope="col">Received</th>
+    <th scope="col">Delete</th>
   </thead>
   <tbody>
     {{#each messages}}
@@ -12,6 +13,7 @@
         <td title="{{this.from.emailAddress.address}}">{{this.from.emailAddress.name}}</td>
         <td>{{this.subject}}</td>
         <td>{{this.receivedDateTime}}</td>
+        <td><a class="btn btn-sm btn-danger" href="/mail/delete/message/{{this.id}}">Delete</a></td>
       </tr>
     {{/each}}
   </tbody>
